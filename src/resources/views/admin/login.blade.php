@@ -40,6 +40,11 @@
             </div>
 
             <button type="submit" class="login-button">管理者ログインする</button>
+
+            <div class="demo-login-section">
+                <p class="demo-text">デモアカウントでログイン</p>
+                <a href="/demo/login/admin" class="demo-button demo-admin">管理者デモでログイン</a>
+            </div>
         </form>
     </main>
 </body>

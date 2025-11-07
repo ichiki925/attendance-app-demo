@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\DemoAuthController;
 
 
 
@@ -18,6 +19,10 @@ Route::get('/', function () {
     }
     return redirect('/login');
 });
+
+// デモログイン用ルート（追加）
+Route::get('/demo/login/admin', [DemoAuthController::class, 'loginAsAdmin'])->name('demo.login.admin');
+Route::get('/demo/login/user', [DemoAuthController::class, 'loginAsUser'])->name('demo.login.user');
 
 // 管理者ログイン（ゲスト専用）
 Route::prefix('admin')->name('admin.')->group(function () {

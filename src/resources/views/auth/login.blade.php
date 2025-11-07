@@ -35,7 +35,13 @@
                     <div class="error">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="submit" class="submit-button">登録する</button>
+            <button type="submit" class="submit-button">ログイン</button>
+
+            <div class="demo-login-section">
+                <p class="demo-text">デモアカウントでログイン</p>
+                <a href="/demo/login/user" class="demo-button demo-user">一般ユーザーでログイン</a>
+            </div>
+            
             <div>
                 <a href="/register" class="signup-link">会員登録はこちら</a>
             </div>

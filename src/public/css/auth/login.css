@@ -20,7 +20,7 @@ body {
 }
 
 .form-container {
-    max-width: 50%;
+    max-width: 40%;
     margin: 0 auto;
     padding: 20px;
 }
@@ -32,11 +32,11 @@ body {
 
 .login-title {
     font-size: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .form-group {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     text-align: left;
 }
 
@@ -80,6 +80,43 @@ body {
 
 .error {
     color: red;
+}
+
+.demo-login-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #cccccd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.demo-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.demo-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.3s;
+}
+
+.demo-button:hover {
+    opacity: 0.85;
+}
+
+.demo-user {
+    background-color: #2970ff;
+    color: white;
 }
 
 @media (min-width: 768px) and (max-width: 850px) {
