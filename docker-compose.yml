@@ -15,6 +15,7 @@ services:
     build: ./docker/php
     volumes:
       - ./src:/var/www/
+      - ./.git:/var/www/.git:ro
 
   mysql:
     image: mysql:8.0
