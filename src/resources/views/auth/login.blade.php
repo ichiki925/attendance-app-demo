@@ -41,10 +41,6 @@
                 <p class="demo-text">デモアカウントでログイン</p>
                 <a href="/demo/login/user" class="demo-button demo-user">一般ユーザーでログイン</a>
             </div>
-            
-            <div>
-                <a href="/register" class="signup-link">会員登録はこちら</a>
-            </div>
         </form>
     </div>
 </body>
