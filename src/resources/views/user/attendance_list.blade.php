@@ -46,30 +46,30 @@
                     $date = \Carbon\Carbon::parse($attendance->date);
                 @endphp
                 <tr>
-                    <td>{{ $date->format('m/d') }}({{ ['日', '月', '火', '水', '木', '金', '土'][$date->dayOfWeek] }})</td>
-                    <td>{{ \Carbon\Carbon::parse($attendance->start_time)->format('H:i') }}</td>
-                    <td>
+                    <td data-label="日付">{{ $date->format('m/d') }}({{ ['日', '月', '火', '水', '木', '金', '土'][$date->dayOfWeek] }})</td>
+                    <td data-label="出勤">{{ \Carbon\Carbon::parse($attendance->start_time)->format('H:i') }}</td>
+                    <td data-label="退勤">
                         @if (!is_null($attendance->end_time))
                             {{ \Carbon\Carbon::parse($attendance->end_time)->format('H:i') }}
                         @else
                             -
                         @endif
                     </td>
-                    <td>
+                    <td data-label="休憩">
                         @if (!is_null($attendance->total_break_time))
                             {{ $attendance->total_break_time }}
                         @else
                             -
                         @endif
                     </td>
-                    <td>
+                    <td data-label="合計">
                         @if (!is_null($attendance->total_time))
                             {{ $attendance->total_time }}
                         @else
                             -
                         @endif
                     </td>
-                    <td><a href="{{ route('attendance.detail', $attendance->id) }}" class="detail-link">詳細</a></td>
+                    <td data-label="詳細"><a href="{{ route('attendance.detail', $attendance->id) }}" class="detail-link">詳細</a></td>
                 </tr>
                 @endforeach
             </tbody>

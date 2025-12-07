@@ -5,30 +5,33 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     min-height: 100vh;
+    background-color: white;
 }
 
+/* デスクトップ向け（デフォルト） */
 .header {
     background-color: black;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
-.logo {
+.logo img {
     height: 24px;
+    display: block;
 }
 
 .form-container {
-    max-width: 50%;
+    max-width: 40%;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 20px;
 }
 
 .login-title {
-    text-align: center;
     font-size: 32px;
-    margin: 30px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .form-group {
@@ -47,7 +50,7 @@ body {
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .login-button {
@@ -59,19 +62,22 @@ body {
     border-radius: 4px;
     font-size: 23px;
     cursor: pointer;
-    margin-top: 2rem;
+    margin-top: 32px;
+    margin-bottom: 20px;
 }
 
 .login-button:hover {
-    opacity: 0.9;
+    opacity: 0.85;
 }
 
 .error {
     color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .demo-login-section {
-    margin-top: 60px;
+    margin-top: 30px;
     padding: 20px;
     background-color: #cccccd;
     border-radius: 8px;
@@ -89,6 +95,7 @@ body {
     display: block;
     width: 100%;
     padding: 12px;
+    margin: 10px 0;
     border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
@@ -106,19 +113,88 @@ body {
     color: white;
 }
 
-@media (min-width: 768px) and (max-width: 850px) {
+/* タブレット向け（850px以下） */
+@media (max-width: 850px) {
     .header {
-        height: 50px;
-        padding: 10px;
+        padding: 15px 20px;
+        margin-bottom: 35px;
     }
 
-    .logo {
-        height: 14px;
+    .logo img {
+        height: 20px;
     }
 
     .form-container {
         max-width: 70%;
-        margin: 0 auto;
-        padding: 20px;
+    }
+
+    .login-title {
+        font-size: 28px;
+    }
+
+    .form-label {
+        font-size: 19px;
+    }
+
+    .form-input {
+        padding: 15px;
+    }
+
+    .login-button {
+        font-size: 22px;
+        padding: 12px;
+        margin-top: 30px;
+    }
+}
+
+/* モバイル向け（767px以下） */
+@media (max-width: 767px) {
+    .header {
+        padding: 15px 20px;
+        margin-bottom: 30px;
+    }
+
+    .logo img {
+        height: 16px;
+    }
+
+    .form-container {
+        max-width: 90%;
+    }
+
+    .login-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .form-label {
+        font-size: 18px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-input {
+        padding: 14px;
+    }
+
+    .login-button {
+        font-size: 20px;
+        padding: 14px;
+        margin-top: 20px;
+    }
+
+    .demo-text {
+        font-size: 13px;
+    }
+
+    .demo-button {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .error {
+        font-size: 13px;
     }
 }

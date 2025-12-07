@@ -46,32 +46,32 @@
             <tbody>
                 @foreach ($attendances as $attendance)
                 <tr>
-                    <td>{{ $attendance->user->name ?? '不明' }}</td>
-                    <td>
+                    <td data-label="名前">{{ $attendance->user->name ?? '不明' }}</td>
+                    <td data-label="出勤">
                         {{ \Carbon\Carbon::parse($attendance->start_time)->format('H:i') }}
                     </td>
-                    <td>
+                    <td data-label="退勤">
                         @if (!is_null($attendance->end_time))
                             {{ \Carbon\Carbon::parse($attendance->end_time)->format('H:i') }}
                         @else
                             -
                         @endif
                     </td>
-                    <td>
+                    <td data-label="休憩">
                         @if (!is_null($attendance->total_break_time))
                             {{ $attendance->total_break_time }}
                         @else
                             -
                         @endif
                     </td>
-                    <td>
+                    <td data-label="合計">
                         @if (!is_null($attendance->total_time))
                             {{ $attendance->total_time }}
                         @else
                             -
                         @endif
                     </td>
-                    <td><a href="{{ route('admin.attendance.detail', $attendance->id) }}" class="detail-link">詳細</a></td>
+                    <td data-label="詳細"><a href="{{ route('admin.attendance.detail', $attendance->id) }}" class="detail-link">詳細</a></td>
                 </tr>
                 @endforeach
             </tbody>

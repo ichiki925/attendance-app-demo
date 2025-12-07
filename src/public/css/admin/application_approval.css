@@ -67,7 +67,6 @@ table tr:last-child td {
     gap: 130px;
 }
 
-
 .time-container {
     display: flex;
     gap: 70px;
@@ -103,16 +102,130 @@ table tr:last-child td {
     cursor: not-allowed;
 }
 
+/* タブレット向け（768px-850px） */
 @media (min-width: 768px) and (max-width: 850px) {
     .attendance-edit {
         max-width: 80%;
     }
 
+    .header {
+        margin: 40px 0;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .vertical-line {
+        height: 27px;
+    }
+
+    .attendance-table th {
+        padding: 25px 30px;
+        font-size: 13px;
+    }
+
+    .attendance-table td {
+        padding: 25px 60px;
+        font-size: 13px;
+    }
+
     .date-container {
-        gap: 100px;
+        gap: 60px;
     }
 
     .time-container {
-        gap: 50px;
+        gap: 35px;
+    }
+
+    .approval-button,
+    .approved-button {
+        padding: 8px 30px;
+        font-size: 15px;
+    }
+}
+
+/* モバイル向け（767px以下） */
+@media (max-width: 767px) {
+    .attendance-edit {
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    .header {
+        margin: 30px 0 20px 0;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .vertical-line {
+        height: 25px;
+    }
+
+    .attendance-container {
+        border-radius: 6px;
+    }
+
+    .attendance-table th {
+        width: 35%;
+        padding: 15px 15px;
+        font-size: 12px;
+    }
+
+    .attendance-table td {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+    .date-container {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .time-container {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .button-container {
+        margin-top: 15px;
+    }
+
+    .approval-button,
+    .approved-button {
+        padding: 8px 30px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+
+/* 極小サイズ（390px以下） */
+@media (max-width: 390px) {
+    .attendance-table th {
+        width: 40%;
+        padding: 12px 10px;
+        font-size: 11px;
+    }
+
+    .attendance-table td {
+        padding: 12px 15px;
+        font-size: 11px;
+    }
+
+    .date-container {
+        gap: 10px;
+    }
+
+    .time-container {
+        gap: 10px;
+    }
+
+    .approval-button,
+    .approved-button {
+        padding: 7px 25px;
+        font-size: 13px;
     }
 }

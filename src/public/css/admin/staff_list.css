@@ -32,13 +32,7 @@
     border-radius: 5px;
     font-size: 14px;
     background-color: #fff;
-}
-
-.staff-table {
-    width: 100%;
-    border-collapse: collapse;
     table-layout: fixed;
-    width: 100%;
 }
 
 .staff-table tr:last-child td {
@@ -87,4 +81,116 @@
     color: #777777;
     padding: 10px;
     border-bottom: 1px solid #f4f4f4;
+}
+
+/* タブレット向け（768px-850px） */
+@media (min-width: 768px) and (max-width: 850px) {
+    .staff_list {
+        margin: 25px auto;
+        padding: 12px;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: 17px;
+    }
+
+    .vertical-line {
+        height: 26px;
+    }
+
+    .staff-table {
+        font-size: 12px;
+    }
+
+    .staff-table th,
+    .staff-table td {
+        padding: 8px 5px;
+    }
+
+    .detail-link {
+        font-size: 12px;
+    }
+}
+
+/* モバイル向け（767px以下） */
+@media (max-width: 767px) {
+    .staff_list {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .header {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .vertical-line {
+        height: 25px;
+    }
+
+    .table-container {
+        overflow-x: visible;
+    }
+
+    /* テーブルをカード型に変換 */
+    .staff-table {
+        background-color: transparent;
+    }
+
+    .staff-table thead {
+        display: none;
+    }
+
+    .staff-table tbody {
+        display: block;
+    }
+
+    .staff-table tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        border: 1px solid #494949;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .staff-table tr:last-child {
+        margin-bottom: 0;
+    }
+
+    .staff-table td {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #e0e0e0;
+        text-align: left;
+        font-size: 14px;
+        align-items: center;
+    }
+
+    .staff-table td:last-child {
+        border-bottom: none;
+    }
+
+    .staff-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #000;
+        display: block;
+    }
+
+    .detail-link {
+        font-size: 14px;
+        text-align: left;
+    }
 }

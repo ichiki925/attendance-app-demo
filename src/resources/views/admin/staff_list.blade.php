@@ -24,9 +24,9 @@
             <tbody>
                 @foreach ($staffs as $staff)
                 <tr>
-                    <td>{{ $staff->name }}</td>
-                    <td>{{ $staff->email }}</td>
-                    <td><a href="{{ route('admin.staff.attendance.list', ['id' => $staff->id]) }}" class="detail-link">詳細</a></td>
+                    <td data-label="名前">{{ $staff->name }}</td>
+                    <td data-label="メールアドレス">{{ $staff->email }}</td>
+                    <td data-label="月次勤怠"><a href="{{ route('admin.staff.attendance.list', ['id' => $staff->id]) }}" class="detail-link">詳細</a></td>
                 </tr>
                 @endforeach
             </tbody>
