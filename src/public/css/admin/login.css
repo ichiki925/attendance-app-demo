@@ -13,12 +13,12 @@ body {
 /* デスクトップ向け（デフォルト） */
 .header {
     background-color: black;
-    padding: 20px;
+    padding: 15px 20px;
     margin-bottom: 40px;
 }
 
 .logo img {
-    height: 24px;
+    height: 50px;
     display: block;
 }
 
